@@ -37,6 +37,8 @@
                 <a href="#objectives" class="hover:text-blue-400 transition-colors">Objectives</a>
                 <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
                 <a href="#monitor" class="hover:text-blue-400 transition-colors">Live Monitor</a>
+                <a href="#maintenance" class="hover:text-blue-400 transition-colors">Maintenance</a>
+                <a href="#fuel" class="hover:text-blue-400 transition-colors">Fuel Analytics</a>
             </nav>
         </div>
     </header>
@@ -210,8 +212,97 @@
         </div>
     </section>
 
+    <section id="maintenance" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-900">
+        <div class="text-center max-w-xl mx-auto mb-10">
+            <h2 class="text-xs font-semibold tracking-widest text-blue-500 uppercase">Asset Health</h2>
+            <p class="text-xl font-bold text-white mt-1">Maintenance & Fleet Service Logs</p>
+            <p class="text-xs text-slate-500 mt-2">Track routine checkups, mechanical errors, and workshop maintenance lifecycles.</p>
+        </div>
+
+        <div class="border border-slate-900 bg-slate-950/40 rounded-xl overflow-hidden">
+            <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                    <tr class="bg-slate-900/50 border-b border-slate-900 text-slate-400 font-medium">
+                        <th class="p-4">Vehicle ID</th>
+                        <th class="p-4">Service Type</th>
+                        <th class="p-4">Odometer</th>
+                        <th class="p-4">Cost</th>
+                        <th class="p-4">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-900 text-slate-300 font-mono">
+                    <tr class="hover:bg-slate-900/20 transition-colors">
+                        <td class="p-4 text-blue-400">#TRK-8821</td>
+                        <td class="p-4">Brake Pad Replacement</td>
+                        <td class="p-4">142,350 km</td>
+                        <td class="p-4 text-emerald-400">$450.00</td>
+                        <td class="p-4"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded text-[10px] font-sans font-bold">COMPLETED</span></td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/20 transition-colors">
+                        <td class="p-4 text-blue-400">#VAN-4042</td>
+                        <td class="p-4">Scheduled Engine Tuning</td>
+                        <td class="p-4">89,110 km</td>
+                        <td class="p-4 text-emerald-400">$210.00</td>
+                        <td class="p-4"><span class="bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded text-[10px] font-sans font-bold">IN_PROGRESS</span></td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/20 transition-colors">
+                        <td class="p-4 text-blue-400">#TRK-1092</td>
+                        <td class="p-4">Transmission Fluid Flush</td>
+                        <td class="p-4">210,440 km</td>
+                        <td class="p-4 text-emerald-400">$680.00</td>
+                        <td class="p-4"><span class="bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded text-[10px] font-sans font-bold">SCHEDULED</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="fuel" class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-900">
+        <div class="text-center max-w-xl mx-auto mb-10">
+            <h2 class="text-xs font-semibold tracking-widest text-blue-500 uppercase">Resource Consumption</h2>
+            <p class="text-xl font-bold text-white mt-1">Fuel Auditing & Efficiency Dashboard</p>
+            <p class="text-xs text-slate-500 mt-2">Monitor expenditure anomalies, average burn rates, and fuel card transactions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-slate-900/30 border border-slate-900 p-5 rounded-xl">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-slate-400">Monthly Fuel Budget</span>
+                    <i data-lucide="wallet" class="w-4 h-4 text-blue-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-white mt-2 font-mono">$18,450.00</div>
+                <div class="w-full bg-slate-900 h-1.5 rounded-full mt-3 overflow-hidden">
+                    <div class="bg-blue-500 h-full rounded-full" style="width: 68%"></div>
+                </div>
+                <div class="text-[10px] text-slate-500 mt-1.5">68% of targeted cost limit reached</div>
+            </div>
+
+            <div class="bg-slate-900/30 border border-slate-900 p-5 rounded-xl">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-slate-400">Avg Fleet Fuel Economy</span>
+                    <i data-lucide="fuel" class="w-4 h-4 text-purple-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-white mt-2 font-mono">7.8 km / L</div>
+                <div class="text-[10px] text-emerald-400 font-medium flex items-center mt-3">
+                    <i data-lucide="arrow-up-right" class="w-3 h-3 mr-0.5"></i> +4.2% optimization vs last month
+                </div>
+            </div>
+
+            <div class="bg-slate-900/30 border border-slate-900 p-5 rounded-xl">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-slate-400">Flagged Fuel Anomaly</span>
+                    <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
+                </div>
+                <div class="text-2xl font-bold text-white mt-2 font-mono">1 Incident</div>
+                <div class="text-[10px] text-red-400 font-medium flex items-center mt-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse mr-1"></span> Sudden drop logged on #TRK-8821
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-600">
-        <p>FleatStream</p>
+        <p>FleetStream</p>
         <p>College Project</p>
     </footer>
 
