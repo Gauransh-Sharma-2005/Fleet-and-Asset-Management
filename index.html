@@ -28,9 +28,7 @@
             background: #334155; 
         }
 
-        /* Bulletproof Fixed Parallax Background Solution 
-           Works perfectly across all desktop browsers and iOS/Safari mobile devices.
-        */
+        /* Bulletproof Fixed Parallax Background Solution */
         .parallax-bg {
             background-image: url('./Utils/transport-logistics-concept.jpg');
             background-attachment: fixed;
@@ -202,11 +200,16 @@
                     <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
                     <span class="text-xs font-semibold text-slate-200">System Exceptions & Violations Feed</span>
                 </div>
-                <button onclick="clearLogs()" class="text-[10px] bg-slate-800 text-slate-400 hover:text-white px-2 py-0.5 rounded font-mono">Clear Storage Logs</button>
-            </div>
-            
-            <div class="p-4 font-mono text-[11px] space-y-3 h-56 overflow-y-scroll" id="logTerminal">
+                <div class="flex items-center space-x-2">
+                    <button onclick="toggleFullscreenView()" class="text-[10px] bg-blue-600/20 text-blue-400 hover:bg-blue-600 hover:text-white border border-blue-500/20 px-2 py-0.5 rounded font-mono transition-colors">
+                        Toggle Fullscreen View
+                    </button>
+                    <button onclick="clearLogs()" class="text-[10px] bg-slate-800 text-slate-400 hover:text-white px-2 py-0.5 rounded font-mono">
+                        Clear Storage Logs
+                    </button>
                 </div>
+            </div>
+            <div class="p-4 font-mono text-[11px] space-y-3 h-56 overflow-y-scroll" id="logTerminal"></div>
         </div>
     </section>
 
@@ -225,14 +228,16 @@
             { type: 'INFO', text: 'Spatial map boundaries successfully synchronized with MySQL structural geometry', time: '15m ago' }
         ];
 
+        // Shifted API initialization sequence to prioritize Visibility layer configuration
         document.addEventListener("DOMContentLoaded", () => {
+            initVisibilitySensor();
             lucide.createIcons();
             loadStoredLogs();
-            initVisibilitySensor();
         });
 
         function loadStoredLogs() {
             const terminal = document.getElementById('logTerminal');
+            if (!terminal) return;
             terminal.innerHTML = '';
             
             let logs = JSON.parse(localStorage.getItem('fleetstream_logs'));
@@ -264,7 +269,9 @@
             if(logs.length > 30) logs.pop(); 
             localStorage.setItem('fleetstream_logs', JSON.stringify(logs));
             loadStoredLogs();
-            document.getElementById('logTerminal').scrollTop = 0;
+            
+            const terminal = document.getElementById('logTerminal');
+            if (terminal) terminal.scrollTop = 0;
         }
 
         function clearLogs() {
@@ -323,6 +330,8 @@
                 const descBox = document.getElementById('statusDesc');
                 const pktBox = document.getElementById('pktCount');
 
+                if (!statusBox || !descBox || !pktBox) return;
+
                 if (document.visibilityState === "visible") {
                     statusBox.innerText = "ACTIVE";
                     statusBox.className = "text-xl font-bold text-emerald-400 mt-1 font-mono";
@@ -335,6 +344,24 @@
                     pktBox.innerText = "120 pkts/s";
                 }
             });
+        }
+
+        function toggleFullscreenView() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen()
+                    .then(() => {
+                        appendLiveLog('INFO', 'Immersive layout optimized: Fullscreen Control Room view authorized.');
+                    })
+                    .catch((err) => {
+                        appendLiveLog('WARNING', `Fullscreen interface initialization failed: ${err.message}`);
+                    });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen().then(() => {
+                        appendLiveLog('INFO', 'Immersive layout terminated: Restored normal display environment.');
+                    });
+                }
+            }
         }
     </script>
 </body>
