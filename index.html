@@ -519,10 +519,66 @@
         </div>
     </section>
 
-    <footer class="border-t border-indigo-500/10 bg-slate-950 py-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 gradient-bg-multicolor opacity-5"></div>
-        <p class="text-xs text-slate-500 mb-3">Built using HTML5 APIs, Tailwind CSS, and Lucide Icons.</p>
-        <p class="text-[10px] text-slate-600">© 2026 FleetStream. All rights reserved.</p>
+    <footer class="bg-slate-950 border-t border-indigo-500/20 pt-16 pb-8 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/10 via-slate-950 to-slate-950"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-indigo-600 p-2 rounded-lg text-white">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-tight">FleetStream</span>
+                </div>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    Industrial-grade asset tracking and telemetry middleware. Designed for low-latency operational visibility in distributed logistics networks.
+                </p>
+                <div class="flex items-center gap-2 text-[10px] text-emerald-400 font-mono">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    SYSTEM OPERATIONAL: Cluster US-EAST-1
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Interface Controls</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Documentation</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition-colors">API Reference</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Telemetry Logs</a></li>
+                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Build Info</h4>
+                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 space-y-2">
+                    <div class="flex justify-between text-[10px]">
+                        <span class="text-slate-500">Version</span>
+                        <span class="text-white font-mono">v2.4.0-stable</span>
+                    </div>
+                    <div class="flex justify-between text-[10px]">
+                        <span class="text-slate-500">Node</span>
+                        <span class="text-white font-mono">edge-srv-01</span>
+                    </div>
+                    <div class="flex justify-between text-[10px]">
+                        <span class="text-slate-500">Uptime</span>
+                        <span class="text-emerald-400 font-mono">248d 14h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600">
+            <p>© 2026 FleetStream Technologies. Secure telemetry transmission protocol.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <script>
