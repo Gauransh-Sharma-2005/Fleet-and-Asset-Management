@@ -211,14 +211,24 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
+        .parallax-bg {
+            background-image: url('./Utils/transport-logistics-concept.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1, p {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white relative">
     
-    <!-- Scroll Progress Indicator -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Interactive Header -->
     <header class="border-b border-indigo-500/20 bg-slate-950/95 backdrop-blur-xl sticky top-0 z-50 shadow-2xl shadow-indigo-900/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3 group cursor-pointer transition-all duration-300">
@@ -235,11 +245,9 @@
         </div>
     </header>
 
-    <!-- Enhanced Hero with Floating Orbs -->
     <section class="relative parallax-bg py-36 sm:py-48 text-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/92 via-indigo-950/88 to-slate-950/92 backdrop-blur-sm"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/96 via-slate-950/95 to-slate-950/98 backdrop-blur-sm"></div>
         
-        <!-- Floating colorful orbs -->
         <div class="floating-orb w-96 h-96 bg-indigo-600/40 top-10 left-10"></div>
         <div class="floating-orb w-80 h-80 bg-purple-600/40 top-40 right-20" style="animation-delay: -5s;"></div>
         <div class="floating-orb w-72 h-72 bg-pink-600/40 bottom-20 left-1/4" style="animation-delay: -10s;"></div>
@@ -284,7 +292,6 @@
         </div>
     </section>
 
-    <!-- Enhanced Objectives with Clean Cards -->
     <section id="objectives" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">Project Targets</h2>
@@ -318,7 +325,6 @@
         </div>
     </section>
 
-    <!-- Enhanced Features with Clean Grid -->
     <section id="features" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">System Capabilities</h2>
@@ -384,14 +390,12 @@
         </div>
     </section>
 
-    <!-- Enhanced Live Monitor -->
     <section id="monitor" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-3">Live Operations Console</h2>
             <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Real-Time Control Room Simulation</p>
         </div>
 
-        <!-- Enhanced Control Panel -->
         <div class="glass-color p-8 rounded-3xl mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center shadow-2xl shadow-indigo-500/20 glowing-border card-interactive">
             <div class="space-y-3">
                 <h3 class="text-sm font-bold text-white flex items-center gap-3">
@@ -426,7 +430,23 @@
             </div>
         </div>
 
-        <!-- Enhanced Stats Grid -->
+        <div class="glass-color p-6 rounded-3xl mb-12 shadow-2xl glowing-border card-interactive">
+            <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                <i data-lucide="keyboard" class="w-4 h-4 text-purple-400"></i>
+                Manual Diagnostic Override
+            </h3>
+            <form id="telemetryForm" class="flex flex-col sm:flex-row gap-4">
+                <input type="text" id="assetId" placeholder="Asset ID (e.g., TRK-100)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required pattern="[A-Z]{3}-[0-9]{3}">
+                
+                <input type="number" id="engineTemp" placeholder="Core Temp (°C)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required min="-50" max="250">
+                
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg text-sm font-bold transition-colors">
+                    Log Diagnostic
+                </button>
+            </form>
+            <p id="formError" class="text-red-400 text-xs mt-2 hidden"></p>
+        </div>
+
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
                 <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
@@ -467,7 +487,6 @@
             </div>
         </div>
 
-        <!-- Enhanced Terminal -->
         <div class="border border-indigo-500/20 bg-slate-950/90 rounded-3xl overflow-hidden shadow-2xl shadow-indigo-500/30 glowing-border">
             <div class="bg-gradient-to-r from-indigo-950/60 to-purple-950/60 px-6 py-5 border-b border-indigo-500/20 flex items-center justify-between">
                 <div class="flex items-center space-x-4">
@@ -500,7 +519,6 @@
         </div>
     </section>
 
-    <!-- Enhanced Footer -->
     <footer class="border-t border-indigo-500/10 bg-slate-950 py-12 text-center relative overflow-hidden">
         <div class="absolute inset-0 gradient-bg-multicolor opacity-5"></div>
         <p class="text-xs text-slate-500 mb-3">Built using HTML5 APIs, Tailwind CSS, and Lucide Icons.</p>
@@ -533,6 +551,55 @@
             initVisibilitySensor();
             lucide.createIcons();
             loadStoredLogs();
+
+            // Hover Events for interactive UI elements
+            const pktCard = document.getElementById('pktCount');
+            if (pktCard) {
+                const parentCard = pktCard.parentElement;
+                parentCard.addEventListener('mouseenter', () => {
+                    pktCard.textContent = '2,840 pkts/s';
+                    pktCard.classList.replace('text-white', 'text-cyan-400');
+                });
+                parentCard.addEventListener('mouseleave', () => {
+                    pktCard.textContent = '1,420 pkts/s';
+                    pktCard.classList.replace('text-cyan-400', 'text-white');
+                });
+            }
+            
+            // Keyboard Shortcut to Clear Logs (Shift + C)
+            document.addEventListener('keydown', (event) => {
+                if (event.shiftKey && event.key.toLowerCase() === 'c') {
+                    clearLogs();
+                    appendLiveLog('INFO', 'Logs cleared via keyboard shortcut (Shift+C).');
+                }
+            });
+
+            // Form Submission and Client-Side Validation Event
+            const telemetryForm = document.getElementById('telemetryForm');
+            const errorText = document.getElementById('formError');
+
+            if (telemetryForm) {
+                telemetryForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Stop normal HTML form submission
+                    
+                    const assetId = document.getElementById('assetId').value.toUpperCase();
+                    const engineTemp = parseFloat(document.getElementById('engineTemp').value);
+                    
+                    // Client-Side Validation Logic
+                    if (engineTemp > 120) {
+                        errorText.textContent = "Error: Temperature exceeds maximum safe diagnostic limits (120°C). Triage required.";
+                        errorText.classList.remove('hidden');
+                        return; // Stop execution to prevent logging bad data
+                    }
+                    
+                    // If validation passes
+                    errorText.classList.add('hidden');
+                    appendLiveLog('INFO', `Manual override logged for ${assetId}: Core Temp at ${engineTemp}°C`);
+                    
+                    // Clear the form for the next entry
+                    telemetryForm.reset();
+                });
+            }
         });
 
         function loadStoredLogs() {
@@ -627,6 +694,23 @@
                 });
             } else {
                 alert("Alert registered! (Enable desktop notifications above for full out-of-browser push windows)");
+            }
+            
+            // UI visual warning
+            const appStatus = document.getElementById('appStatus');
+            const statusDesc = document.getElementById('statusDesc');
+            if(appStatus && statusDesc) {
+                appStatus.textContent = 'FAULT DETECTED';
+                appStatus.classList.replace('text-emerald-400', 'text-red-500');
+                statusDesc.textContent = 'Emergency triage required immediately';
+                statusDesc.classList.replace('text-slate-400', 'text-red-400');
+                
+                setTimeout(() => {
+                    appStatus.textContent = 'ACTIVE';
+                    appStatus.classList.replace('text-red-500', 'text-emerald-400');
+                    statusDesc.textContent = 'Processing pipeline foreground run';
+                    statusDesc.classList.replace('text-red-400', 'text-slate-400');
+                }, 5000);
             }
         }
 
