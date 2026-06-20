@@ -225,359 +225,362 @@
 
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white relative">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+    <main class="flex-grow">
+
+        <div class="scroll-progress" id="scrollProgress"></div>
     
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <header class="border-b border-indigo-500/20 bg-slate-950/95 backdrop-blur-xl sticky top-0 z-50 shadow-2xl shadow-indigo-900/20">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3 group cursor-pointer transition-all duration-300">
-                <div class="gradient-bg-multicolor p-2.5 rounded-xl text-white shadow-xl neon-glow">
-                    <i data-lucide="activity" class="w-6 h-6"></i>
+        <header class="border-b border-indigo-500/20 bg-slate-950/95 backdrop-blur-xl sticky top-0 z-50 shadow-2xl shadow-indigo-900/20">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center space-x-3 group cursor-pointer transition-all duration-300">
+                    <div class="gradient-bg-multicolor p-2.5 rounded-xl text-white shadow-xl neon-glow">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight gradient-multicolor">FleetStream</span>
                 </div>
-                <span class="text-xl font-bold tracking-tight gradient-multicolor">FleetStream</span>
+                <nav class="space-x-10 text-sm">
+                    <a href="#objectives" class="nav-link text-slate-400 hover:text-indigo-400 font-semibold">Objectives</a>
+                    <a href="#features" class="nav-link text-slate-400 hover:text-purple-400 font-semibold">Features</a>
+                    <a href="#monitor" class="nav-link text-slate-400 hover:text-pink-400 font-semibold">Live Monitor</a>
+                </nav>
             </div>
-            <nav class="space-x-10 text-sm">
-                <a href="#objectives" class="nav-link text-slate-400 hover:text-indigo-400 font-semibold">Objectives</a>
-                <a href="#features" class="nav-link text-slate-400 hover:text-purple-400 font-semibold">Features</a>
-                <a href="#monitor" class="nav-link text-slate-400 hover:text-pink-400 font-semibold">Live Monitor</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="relative parallax-bg py-36 sm:py-48 text-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/96 via-slate-950/95 to-slate-950/98 backdrop-blur-sm"></div>
-        
-        <div class="floating-orb w-96 h-96 bg-indigo-600/40 top-10 left-10"></div>
-        <div class="floating-orb w-80 h-80 bg-purple-600/40 top-40 right-20" style="animation-delay: -5s;"></div>
-        <div class="floating-orb w-72 h-72 bg-pink-600/40 bottom-20 left-1/4" style="animation-delay: -10s;"></div>
-        <div class="floating-orb w-64 h-64 bg-cyan-600/30 bottom-10 right-1/3" style="animation-delay: -15s;"></div>
-        
-        <div class="relative max-w-6xl mx-auto px-6 space-y-10 z-10">
-            <div class="inline-flex items-center space-x-3 bg-indigo-500/30 border border-indigo-400/50 px-6 py-2 rounded-full text-xs font-bold text-indigo-300 badge-glow transition-all duration-300">
-                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
-                <span>Real-Time Tracking Domain</span>
-                <i data-lucide="sparkles" class="w-3 h-3"></i>
+        </header>
+    
+        <section class="relative parallax-bg py-36 sm:py-48 text-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/96 via-slate-950/95 to-slate-950/98 backdrop-blur-sm"></div>
+            
+            <div class="floating-orb w-96 h-96 bg-indigo-600/40 top-10 left-10"></div>
+            <div class="floating-orb w-80 h-80 bg-purple-600/40 top-40 right-20" style="animation-delay: -5s;"></div>
+            <div class="floating-orb w-72 h-72 bg-pink-600/40 bottom-20 left-1/4" style="animation-delay: -10s;"></div>
+            <div class="floating-orb w-64 h-64 bg-cyan-600/30 bottom-10 right-1/3" style="animation-delay: -15s;"></div>
+            
+            <div class="relative max-w-6xl mx-auto px-6 space-y-10 z-10">
+                <div class="inline-flex items-center space-x-3 bg-indigo-500/30 border border-indigo-400/50 px-6 py-2 rounded-full text-xs font-bold text-indigo-300 badge-glow transition-all duration-300">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    <span>Real-Time Tracking Domain</span>
+                    <i data-lucide="sparkles" class="w-3 h-3"></i>
+                </div>
+                
+                <h1 class="text-6xl sm:text-7xl font-black tracking-tight text-white drop-shadow-2xl leading-tight">
+                    Real-Time Fleet &
+                    <br class="block">
+                    <span class="gradient-multicolor">Asset Management</span>
+                    <br class="block"> System
+                </h1>
+                
+                <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
+                    Eliminate operational blind spots by transforming physical vehicles into 
+                    <span class="text-indigo-300 font-bold bg-indigo-500/20 px-2 py-1 rounded">intelligent, data-streaming nodes</span>. 
+                    Built with native HTML5 telemetry integrations and a 
+                    <span class="text-purple-300 font-bold bg-purple-500/20 px-2 py-1 rounded">highly scalable distributed topology</span>.
+                </p>
+                
+                <div class="pt-8 flex flex-col sm:flex-row justify-center gap-5">
+                    <a href="#monitor" class="btn-ripple gradient-bg-multicolor text-white px-10 py-4 rounded-xl font-bold text-base shadow-2xl shadow-indigo-500/50">
+                        <span class="flex items-center justify-center gap-3">
+                            <i data-lucide="terminal" class="w-5 h-5"></i>
+                            Open Telemetry Monitor
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </span>
+                    </a>
+                    <button onclick="requestNotificationPermission()" id="notiBtn" class="btn-ripple glass-color text-slate-300 px-10 py-4 rounded-xl font-bold text-base">
+                        <span class="flex items-center justify-center gap-3">
+                            <i data-lucide="bell" class="w-5 h-5"></i>
+                            Enable System Notifications
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <section id="objectives" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">Project Targets</h2>
+                <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Core Objectives & Business Impact</p>
             </div>
             
-            <h1 class="text-6xl sm:text-7xl font-black tracking-tight text-white drop-shadow-2xl leading-tight">
-                Real-Time Fleet &
-                <br class="block">
-                <span class="gradient-multicolor">Asset Management</span>
-                <br class="block"> System
-            </h1>
-            
-            <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
-                Eliminate operational blind spots by transforming physical vehicles into 
-                <span class="text-indigo-300 font-bold bg-indigo-500/20 px-2 py-1 rounded">intelligent, data-streaming nodes</span>. 
-                Built with native HTML5 telemetry integrations and a 
-                <span class="text-purple-300 font-bold bg-purple-500/20 px-2 py-1 rounded">highly scalable distributed topology</span>.
-            </p>
-            
-            <div class="pt-8 flex flex-col sm:flex-row justify-center gap-5">
-                <a href="#monitor" class="btn-ripple gradient-bg-multicolor text-white px-10 py-4 rounded-xl font-bold text-base shadow-2xl shadow-indigo-500/50">
-                    <span class="flex items-center justify-center gap-3">
-                        <i data-lucide="terminal" class="w-5 h-5"></i>
-                        Open Telemetry Monitor
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </span>
-                </a>
-                <button onclick="requestNotificationPermission()" id="notiBtn" class="btn-ripple glass-color text-slate-300 px-10 py-4 rounded-xl font-bold text-base">
-                    <span class="flex items-center justify-center gap-3">
-                        <i data-lucide="bell" class="w-5 h-5"></i>
-                        Enable System Notifications
-                    </span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="objectives" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">Project Targets</h2>
-            <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Core Objectives & Business Impact</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
-                <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
-                    <div class="text-emerald-400"><i data-lucide="trending-down" class="w-8 h-8"></i></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
+                    <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
+                        <div class="text-emerald-400"><i data-lucide="trending-down" class="w-8 h-8"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Minimize Delivery Lag</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Provide dispatch operators with instantaneous fleet location streams to proactively route around active bottlenecks.</p>
                 </div>
-                <h3 class="text-lg font-bold text-white mb-3">Minimize Delivery Lag</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Provide dispatch operators with instantaneous fleet location streams to proactively route around active bottlenecks.</p>
+                
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
+                    <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
+                        <div class="text-emerald-400"><i data-lucide="gauge" class="w-8 h-8"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Optimize Fuel Efficiency</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Enforce strict accountability structures over fleet operations by identifying and logging prolonged engine idling patterns.</p>
+                </div>
+                
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
+                    <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
+                        <div class="text-emerald-400"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Secure Asset Safety</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Establish persistent geographical containment perimeters backed by automated threat alerts to defend vehicle hardware.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="features" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">System Capabilities</h2>
+                <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Platform Core Features</p>
             </div>
             
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
-                <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
-                    <div class="text-emerald-400"><i data-lucide="gauge" class="w-8 h-8"></i></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
+                    <div class="bg-gradient-to-br from-indigo-500/30 to-indigo-600/30 text-indigo-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-indigo-500/20 icon-bounce">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-base font-bold text-white mb-2">High-Frequency Telemetry Ingestion</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Streams continuous location, speed, and heading diagnostics directly from edge tracking devices at fixed 5-second intervals.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="bg-indigo-500/20 text-indigo-300 text-xs px-2 py-1 rounded font-bold">5s interval</span>
+                            <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded font-bold">Real-time</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-white mb-3">Optimize Fuel Efficiency</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Enforce strict accountability structures over fleet operations by identifying and logging prolonged engine idling patterns.</p>
-            </div>
-            
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border">
-                <div class="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 icon-bounce">
-                    <div class="text-emerald-400"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
+                    <div class="bg-gradient-to-br from-purple-500/30 to-purple-600/30 text-purple-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-purple-500/20 icon-bounce">
+                        <i data-lucide="navigation" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-base font-bold text-white mb-2">Automated Geofencing Perimeters</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Leverages spatial database polygons to map and instantly track when physical assets enter or exit designated yard operational areas.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded font-bold">Polygon-based</span>
+                            <span class="bg-pink-500/20 text-pink-300 text-xs px-2 py-1 rounded font-bold">Auto-track</span>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-lg font-bold text-white mb-3">Secure Asset Safety</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Establish persistent geographical containment perimeters backed by automated threat alerts to defend vehicle hardware.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">System Capabilities</h2>
-            <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Platform Core Features</p>
-        </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
-                <div class="bg-gradient-to-br from-indigo-500/30 to-indigo-600/30 text-indigo-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-indigo-500/20 icon-bounce">
-                    <i data-lucide="zap" class="w-7 h-7"></i>
+                
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
+                    <div class="bg-gradient-to-br from-pink-500/30 to-pink-600/30 text-pink-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-pink-500/20 icon-bounce">
+                        <i data-lucide="bell" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-base font-bold text-white mb-2">Instant Safety Exception Alerts</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Runs an event-driven engine that continuously flags asset speeding violations or harsh braking actions the exact millisecond they occur.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="bg-pink-500/20 text-pink-300 text-xs px-2 py-1 rounded font-bold">Millisecond</span>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-xs px-2 py-1 rounded font-bold">Event-driven</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex-1">
-                    <h3 class="text-base font-bold text-white mb-2">High-Frequency Telemetry Ingestion</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Streams continuous location, speed, and heading diagnostics directly from edge tracking devices at fixed 5-second intervals.</p>
-                    <div class="mt-3 flex items-center gap-2">
-                        <span class="bg-indigo-500/20 text-indigo-300 text-xs px-2 py-1 rounded font-bold">5s interval</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded font-bold">Real-time</span>
+                
+                <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
+                    <div class="bg-gradient-to-br from-cyan-500/30 to-cyan-600/30 text-cyan-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-cyan-500/20 icon-bounce">
+                        <i data-lucide="history" class="w-7 h-7"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-base font-bold text-white mb-2">Time-Series Path Breadcrumbs</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Maintains structured ledger archives containing sequential trajectory records to accurately reconstruct historical asset travel maps.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="bg-cyan-500/20 text-cyan-300 text-xs px-2 py-1 rounded font-bold">Historical</span>
+                            <span class="bg-indigo-500/20 text-indigo-300 text-xs px-2 py-1 rounded font-bold">Structured</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
-                <div class="bg-gradient-to-br from-purple-500/30 to-purple-600/30 text-purple-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-purple-500/20 icon-bounce">
-                    <i data-lucide="navigation" class="w-7 h-7"></i>
+        </section>
+    
+        <section id="monitor" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-3">Live Operations Console</h2>
+                <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Real-Time Control Room Simulation</p>
+            </div>
+    
+            <div class="glass-color p-8 rounded-3xl mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center shadow-2xl shadow-indigo-500/20 glowing-border card-interactive">
+                <div class="space-y-3">
+                    <h3 class="text-sm font-bold text-white flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse neon-glow"></span>
+                        <span class="gradient-multicolor">HTML5 Edge Simulator Node</span>
+                    </h3>
+                    <p class="text-[11px] text-slate-400">Pulls live browser Geolocation telemetry coordinates and routes them straight to storage registers.</p>
                 </div>
-                <div class="flex-1">
-                    <h3 class="text-base font-bold text-white mb-2">Automated Geofencing Perimeters</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Leverages spatial database polygons to map and instantly track when physical assets enter or exit designated yard operational areas.</p>
-                    <div class="mt-3 flex items-center gap-2">
-                        <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded font-bold">Polygon-based</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs px-2 py-1 rounded font-bold">Auto-track</span>
+                <div class="text-xs space-y-2 font-mono text-slate-400 bg-slate-900/50 p-4 rounded-xl border border-indigo-500/10">
+                    <div class="flex items-center gap-3">
+                        <span class="text-slate-500">Latitude:</span>
+                        <span id="geoLat" class="text-indigo-300 font-bold stats-pulse">Not Connected</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-slate-500">Longitude:</span>
+                        <span id="geoLng" class="text-purple-300 font-bold stats-pulse">Not Connected</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
-                <div class="bg-gradient-to-br from-pink-500/30 to-pink-600/30 text-pink-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-pink-500/20 icon-bounce">
-                    <i data-lucide="bell" class="w-7 h-7"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-base font-bold text-white mb-2">Instant Safety Exception Alerts</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Runs an event-driven engine that continuously flags asset speeding violations or harsh braking actions the exact millisecond they occur.</p>
-                    <div class="mt-3 flex items-center gap-2">
-                        <span class="bg-pink-500/20 text-pink-300 text-xs px-2 py-1 rounded font-bold">Millisecond</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs px-2 py-1 rounded font-bold">Event-driven</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="glass-color-card card-interactive p-8 rounded-3xl glowing-border flex items-start space-x-6">
-                <div class="bg-gradient-to-br from-cyan-500/30 to-cyan-600/30 text-cyan-400 p-4 rounded-2xl shrink-0 shadow-xl shadow-cyan-500/20 icon-bounce">
-                    <i data-lucide="history" class="w-7 h-7"></i>
-                </div>
-                <div class="flex-1">
-                    <h3 class="text-base font-bold text-white mb-2">Time-Series Path Breadcrumbs</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Maintains structured ledger archives containing sequential trajectory records to accurately reconstruct historical asset travel maps.</p>
-                    <div class="mt-3 flex items-center gap-2">
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs px-2 py-1 rounded font-bold">Historical</span>
-                        <span class="bg-indigo-500/20 text-indigo-300 text-xs px-2 py-1 rounded font-bold">Structured</span>
-                    </div>
+                <div class="flex justify-end gap-4">
+                    <button onclick="startEdgeTracking()" class="btn-ripple gradient-bg-multicolor text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-xl shadow-emerald-500/40">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="radio" class="w-4 h-4"></i>
+                            Stream Device GPS
+                        </span>
+                    </button>
+                    <button onclick="simulateInfraction()" class="btn-ripple bg-red-950/50 hover:bg-red-900/70 text-red-400 border border-red-500/50 px-6 py-3.5 rounded-xl font-bold text-sm">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="triangle-alert" class="w-4 h-4"></i>
+                            Trigger Alert Test
+                        </span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="monitor" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-3">Live Operations Console</h2>
-            <p class="text-4xl font-black text-white mt-3 gradient-multicolor">Real-Time Control Room Simulation</p>
-        </div>
-
-        <div class="glass-color p-8 rounded-3xl mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center shadow-2xl shadow-indigo-500/20 glowing-border card-interactive">
-            <div class="space-y-3">
-                <h3 class="text-sm font-bold text-white flex items-center gap-3">
-                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse neon-glow"></span>
-                    <span class="gradient-multicolor">HTML5 Edge Simulator Node</span>
+    
+            <div class="glass-color p-6 rounded-3xl mb-12 shadow-2xl glowing-border card-interactive">
+                <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="keyboard" class="w-4 h-4 text-purple-400"></i>
+                    Manual Diagnostic Override
                 </h3>
-                <p class="text-[11px] text-slate-400">Pulls live browser Geolocation telemetry coordinates and routes them straight to storage registers.</p>
-            </div>
-            <div class="text-xs space-y-2 font-mono text-slate-400 bg-slate-900/50 p-4 rounded-xl border border-indigo-500/10">
-                <div class="flex items-center gap-3">
-                    <span class="text-slate-500">Latitude:</span>
-                    <span id="geoLat" class="text-indigo-300 font-bold stats-pulse">Not Connected</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="text-slate-500">Longitude:</span>
-                    <span id="geoLng" class="text-purple-300 font-bold stats-pulse">Not Connected</span>
-                </div>
-            </div>
-            <div class="flex justify-end gap-4">
-                <button onclick="startEdgeTracking()" class="btn-ripple gradient-bg-multicolor text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-xl shadow-emerald-500/40">
-                    <span class="flex items-center gap-2">
-                        <i data-lucide="radio" class="w-4 h-4"></i>
-                        Stream Device GPS
-                    </span>
-                </button>
-                <button onclick="simulateInfraction()" class="btn-ripple bg-red-950/50 hover:bg-red-900/70 text-red-400 border border-red-500/50 px-6 py-3.5 rounded-xl font-bold text-sm">
-                    <span class="flex items-center gap-2">
-                        <i data-lucide="triangle-alert" class="w-4 h-4"></i>
-                        Trigger Alert Test
-                    </span>
-                </button>
-            </div>
-        </div>
-
-        <div class="glass-color p-6 rounded-3xl mb-12 shadow-2xl glowing-border card-interactive">
-            <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
-                <i data-lucide="keyboard" class="w-4 h-4 text-purple-400"></i>
-                Manual Diagnostic Override
-            </h3>
-            <form id="telemetryForm" class="flex flex-col sm:flex-row gap-4">
-                <input type="text" id="assetId" placeholder="Asset ID (e.g., TRK-100)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required pattern="[A-Z]{3}-[0-9]{3}">
-                
-                <input type="number" id="engineTemp" placeholder="Core Temp (°C)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required min="-50" max="250">
-                
-                <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg text-sm font-bold transition-colors">
-                    Log Diagnostic
-                </button>
-            </form>
-            <p id="formError" class="text-red-400 text-xs mt-2 hidden"></p>
-        </div>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
-                <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
-                    <i data-lucide="server" class="w-3 h-3"></i>
-                    Ingestion Gateway
-                </div>
-                <div class="text-3xl font-black text-white font-mono stats-pulse" id="pktCount">1,420 pkts/s</div>
-                <div class="text-[9px] text-emerald-400 font-bold flex items-center mt-3">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse neon-glow mr-2"></span> 0 packets dropped
-                </div>
-            </div>
-            
-            <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
-                <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
-                    <i data-lucide="truck" class="w-3 h-3"></i>
-                    Active Fleet
-                </div>
-                <div class="text-3xl font-black text-white font-mono stats-pulse">348 / 350</div>
-                <div class="text-[9px] text-slate-400 mt-3">Nodes transmitting telemetry</div>
-            </div>
-            
-            <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
-                <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
-                    <i data-lucide="database" class="w-3 h-3"></i>
-                    Database Latency
-                </div>
-                <div class="text-3xl font-black text-white font-mono stats-pulse">4.2 ms</div>
-                <div class="text-[9px] text-cyan-400 mt-3">Spatial 1:1 Upsert cycle</div>
-            </div>
-            
-            <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
-                <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
-                    <i data-lucide="activity" class="w-3 h-3"></i>
-                    Console Status
-                </div>
-                <div class="text-3xl font-black text-emerald-400 font-mono neon-glow stats-pulse" id="appStatus">ACTIVE</div>
-                <div id="statusDesc" class="text-[9px] text-slate-400 mt-3">Processing pipeline foreground run</div>
-            </div>
-        </div>
-
-        <div class="border border-indigo-500/20 bg-slate-950/90 rounded-3xl overflow-hidden shadow-2xl shadow-indigo-500/30 glowing-border">
-            <div class="bg-gradient-to-r from-indigo-950/60 to-purple-950/60 px-6 py-5 border-b border-indigo-500/20 flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                    <span class="w-3 h-3 rounded-full bg-red-500 animate-ping neon-glow"></span>
-                    <span class="text-sm font-bold text-white flex items-center gap-2">
-                        <i data-lucide="alert-circle" class="w-4 h-4 text-red-400"></i>
-                        System Exceptions & Violations Feed
-                    </span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <button onclick="toggleFullscreenView()" class="btn-ripple bg-indigo-600/30 text-indigo-300 hover:bg-indigo-600 hover:text-white border border-indigo-500/40 px-4 py-2 rounded-lg font-mono text-[10px]">
-                        <span class="flex items-center gap-2">
-                            <i data-lucide="maximize" class="w-3 h-3"></i>
-                            Fullscreen
-                        </span>
+                <form id="telemetryForm" class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="assetId" placeholder="Asset ID (e.g., TRK-100)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required pattern="[A-Z]{3}-[0-9]{3}">
+                    
+                    <input type="number" id="engineTemp" placeholder="Core Temp (°C)" class="bg-slate-900 border border-indigo-500/30 text-white text-sm rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-400" required min="-50" max="250">
+                    
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg text-sm font-bold transition-colors">
+                        Log Diagnostic
                     </button>
-                    <button onclick="clearLogs()" class="btn-ripple bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700 px-4 py-2 rounded-lg font-mono text-[10px]">
-                        <span class="flex items-center gap-2">
-                            <i data-lucide="trash-2" class="w-3 h-3"></i>
-                            Clear Logs
+                </form>
+                <p id="formError" class="text-red-400 text-xs mt-2 hidden"></p>
+            </div>
+    
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
+                    <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
+                        <i data-lucide="server" class="w-3 h-3"></i>
+                        Ingestion Gateway
+                    </div>
+                    <div class="text-3xl font-black text-white font-mono stats-pulse" id="pktCount">1,420 pkts/s</div>
+                    <div class="text-[9px] text-emerald-400 font-bold flex items-center mt-3">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse neon-glow mr-2"></span> 0 packets dropped
+                    </div>
+                </div>
+                
+                <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
+                    <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
+                        <i data-lucide="truck" class="w-3 h-3"></i>
+                        Active Fleet
+                    </div>
+                    <div class="text-3xl font-black text-white font-mono stats-pulse">348 / 350</div>
+                    <div class="text-[9px] text-slate-400 mt-3">Nodes transmitting telemetry</div>
+                </div>
+                
+                <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
+                    <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
+                        <i data-lucide="database" class="w-3 h-3"></i>
+                        Database Latency
+                    </div>
+                    <div class="text-3xl font-black text-white font-mono stats-pulse">4.2 ms</div>
+                    <div class="text-[9px] text-cyan-400 mt-3">Spatial 1:1 Upsert cycle</div>
+                </div>
+                
+                <div class="glass-color-card p-6 rounded-3xl card-interactive glowing-border">
+                    <div class="text-slate-500 text-[10px] font-bold tracking-wider uppercase mb-3 flex items-center gap-2">
+                        <i data-lucide="activity" class="w-3 h-3"></i>
+                        Console Status
+                    </div>
+                    <div class="text-3xl font-black text-emerald-400 font-mono neon-glow stats-pulse" id="appStatus">ACTIVE</div>
+                    <div id="statusDesc" class="text-[9px] text-slate-400 mt-3">Processing pipeline foreground run</div>
+                </div>
+            </div>
+    
+            <div class="border border-indigo-500/20 bg-slate-950/90 rounded-3xl overflow-hidden shadow-2xl shadow-indigo-500/30 glowing-border">
+                <div class="bg-gradient-to-r from-indigo-950/60 to-purple-950/60 px-6 py-5 border-b border-indigo-500/20 flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <span class="w-3 h-3 rounded-full bg-red-500 animate-ping neon-glow"></span>
+                        <span class="text-sm font-bold text-white flex items-center gap-2">
+                            <i data-lucide="alert-circle" class="w-4 h-4 text-red-400"></i>
+                            System Exceptions & Violations Feed
                         </span>
-                    </button>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button onclick="toggleFullscreenView()" class="btn-ripple bg-indigo-600/30 text-indigo-300 hover:bg-indigo-600 hover:text-white border border-indigo-500/40 px-4 py-2 rounded-lg font-mono text-[10px]">
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="maximize" class="w-3 h-3"></i>
+                                Fullscreen
+                            </span>
+                        </button>
+                        <button onclick="clearLogs()" class="btn-ripple bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700 px-4 py-2 rounded-lg font-mono text-[10px]">
+                            <span class="flex items-center gap-2">
+                                <i data-lucide="trash-2" class="w-3 h-3"></i>
+                                Clear Logs
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 font-mono text-[11px] space-y-4 h-72 overflow-y-scroll" id="logTerminal">
+                    <div class="text-indigo-400 text-[10px] mb-4">
+                        <span class="terminal-cursor">█</span> Initializing telemetry stream...
+                    </div>
                 </div>
             </div>
-            <div class="p-6 font-mono text-[11px] space-y-4 h-72 overflow-y-scroll" id="logTerminal">
-                <div class="text-indigo-400 text-[10px] mb-4">
-                    <span class="terminal-cursor">█</span> Initializing telemetry stream...
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="bg-slate-950 border-t border-indigo-500/20 pt-16 pb-8 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/10 via-slate-950 to-slate-950"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/10 via-slate-950 to-slate-950"></div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            
-            <div class="space-y-4">
-                <div class="flex items-center space-x-3">
-                    <div class="bg-indigo-600 p-2 rounded-lg text-white">
-                        <i data-lucide="activity" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-lg font-bold text-white tracking-tight">FleetStream</span>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        
+        <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 p-2 rounded-lg text-white shadow-lg shadow-indigo-500/20">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
                 </div>
-                <p class="text-slate-400 text-xs leading-relaxed">
-                    Industrial-grade asset tracking and telemetry middleware. Designed for low-latency operational visibility in distributed logistics networks.
-                </p>
-                <div class="flex items-center gap-2 text-[10px] text-emerald-400 font-mono">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                    </span>
-                    SYSTEM OPERATIONAL: Cluster US-EAST-1
-                </div>
+                <span class="text-xl font-bold text-white tracking-tight">FleetStream</span>
             </div>
-
-            <div class="space-y-4">
-                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Interface Controls</h4>
-                <ul class="space-y-2 text-sm text-slate-400">
-                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Documentation</a></li>
-                    <li><a href="#" class="hover:text-indigo-400 transition-colors">API Reference</a></li>
-                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Telemetry Logs</a></li>
-                    <li><a href="#" class="hover:text-indigo-400 transition-colors">Support Portal</a></li>
-                </ul>
-            </div>
-
-            <div class="space-y-4">
-                <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest">Build Info</h4>
-                <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5 space-y-2">
-                    <div class="flex justify-between text-[10px]">
-                        <span class="text-slate-500">Version</span>
-                        <span class="text-white font-mono">v2.4.0-stable</span>
-                    </div>
-                    <div class="flex justify-between text-[10px]">
-                        <span class="text-slate-500">Node</span>
-                        <span class="text-white font-mono">edge-srv-01</span>
-                    </div>
-                    <div class="flex justify-between text-[10px]">
-                        <span class="text-slate-500">Uptime</span>
-                        <span class="text-emerald-400 font-mono">248d 14h</span>
-                    </div>
-                </div>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                Industrial-grade asset tracking and telemetry middleware. Designed for low-latency operational visibility in distributed logistics networks.
+            </p>
+            <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono bg-emerald-500/10 w-fit px-3 py-1 rounded-full border border-emerald-500/20">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                SYSTEM OPERATIONAL
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-600">
-            <p>© 2026 FleetStream Technologies. Secure telemetry transmission protocol.</p>
-            <div class="flex gap-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-indigo-400">Privacy Policy</a>
-                <a href="#" class="hover:text-indigo-400">Terms of Service</a>
+        <div class="space-y-4">
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest mb-6">Interface Controls</h4>
+            <ul class="space-y-4 text-sm text-slate-400">
+                <li><a href="#" class="hover:text-indigo-400 hover:translate-x-2 transition-all duration-300 inline-block flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> Documentation</a></li>
+                <li><a href="#" class="hover:text-indigo-400 hover:translate-x-2 transition-all duration-300 inline-block flex items-center gap-2"><i data-lucide="code" class="w-4 h-4"></i> API Reference</a></li>
+                <li><a href="#" class="hover:text-indigo-400 hover:translate-x-2 transition-all duration-300 inline-block flex items-center gap-2"><i data-lucide="terminal" class="w-4 h-4"></i> Telemetry Logs</a></li>
+                <li><a href="#" class="hover:text-indigo-400 hover:translate-x-2 transition-all duration-300 inline-block flex items-center gap-2"><i data-lucide="help-circle" class="w-4 h-4"></i> Support Portal</a></li>
+            </ul>
+        </div>
+
+        <div class="space-y-4">
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-widest mb-6">Build Info</h4>
+            <div class="bg-slate-900/50 p-5 rounded-2xl border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group">
+                <div class="flex justify-between text-xs py-2 border-b border-white/5">
+                    <span class="text-slate-500">Version</span>
+                    <span class="text-white font-mono group-hover:text-indigo-400">v2.4.0-stable</span>
+                </div>
+                <div class="flex justify-between text-xs py-2 border-b border-white/5">
+                    <span class="text-slate-500">Node</span>
+                    <span class="text-white font-mono group-hover:text-indigo-400">edge-srv-01</span>
+                </div>
+                <div class="flex justify-between text-xs py-2">
+                    <span class="text-slate-500">Uptime</span>
+                    <span class="text-emerald-400 font-mono">248d 14h</span>
+                </div>
             </div>
+        </div>
+    </div>
+
+        <div class="w-full text-center py-8 border-t border-indigo-500/30 mt-10">
+            <p class="text-[14px] font-bold text-white tracking-widest uppercase opacity-80">
+                &copy; 2026 FleetStream Technologies
+            </p>
+            <p class="text-[12px] text-slate-400 mt-2">
+                Secure telemetry transmission protocol • All rights reserved.
+            </p>
         </div>
     </footer>
 
