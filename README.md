@@ -1,4 +1,4 @@
-https://fleetstreamm.netlify.app/
+https://fleet-and-asset-management.vercel.app/
 
 FleetStream is an event-driven, high-frequency IoT telemetry ecosystem designed to eliminate operational blind spots in modern logistics. The platform transforms physical vehicle fleets into intelligent, data-streaming nodes by capturing continuous edge coordinates, running instantaneous spatial perimeter matching, and processing thousands of concurrent packets per second with zero pipeline lag.
 
