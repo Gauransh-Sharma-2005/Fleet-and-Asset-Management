@@ -293,6 +293,75 @@
                 </div>
             </div>
         </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10 text-center">
+            <h2 class="text-xs font-bold tracking-widest text-indigo-400 uppercase mb-3">Telemetry Sandbox</h2>
+            <p class="text-4xl font-black text-white mt-3 mb-12 gradient-multicolor">Interactive Vehicle Ping</p>
+            
+            <div id="feature-card" class="glass-color-card card-interactive p-8 rounded-3xl glowing-border max-w-md mx-auto cursor-pointer transition-all duration-300">
+                <div class="bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto icon-bounce">
+                    <div class="text-indigo-400"><i data-lucide="radio" class="w-8 h-8"></i></div>
+                </div>
+                <h3 id="scanner-title" class="text-xl font-bold text-white mb-3">Telemetry Scanner</h3>
+                <p id="scanner-desc" class="text-slate-400 text-sm leading-relaxed mb-4">Hover over this console card to ping the active fleet simulator node and retrieve instantaneous diagnostics.</p>
+                
+                <div id="scanner-data" class="hidden text-left font-mono text-xs bg-slate-950/80 p-4 rounded-xl border border-indigo-500/20 space-y-2 mt-4 transition-all duration-300">
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Asset Ref:</span>
+                        <span class="text-indigo-300 font-bold">TRK-8821</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Node Status:</span>
+                        <span class="text-emerald-400 font-bold flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> ONLINE
+                        </span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Ingestion Latency:</span>
+                        <span class="text-purple-300 font-bold">12ms</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">GPS Stream:</span>
+                        <span class="text-cyan-300 font-bold">Locked (5s heartbeat)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const card = document.getElementById('feature-card');
+            const scannerData = document.getElementById('scanner-data');
+            const scannerTitle = document.getElementById('scanner-title');
+            const scannerDesc = document.getElementById('scanner-desc');
+
+            // Mouseover event to query live telemetry simulation
+            card.addEventListener('mouseover', () => {
+                if (scannerData) scannerData.classList.remove('hidden');
+                if (scannerTitle) {
+                    scannerTitle.textContent = "Telemetry Link Established";
+                    scannerTitle.classList.add('text-indigo-300');
+                }
+                if (scannerDesc) {
+                    scannerDesc.textContent = "Streaming live metrics from Fleet Streamer node.";
+                }
+                // Trigger a log append to show it's interactive with the telemetry feed
+                if (typeof appendLiveLog === 'function') {
+                    appendLiveLog('INFO', 'Interactive telemetry scan initiated via sandbox hover event.');
+                }
+            });
+
+            // Mouseout event to disconnect and restore
+            card.addEventListener('mouseout', () => {
+                if (scannerData) scannerData.classList.add('hidden');
+                if (scannerTitle) {
+                    scannerTitle.textContent = "Telemetry Scanner";
+                    scannerTitle.classList.remove('text-indigo-300');
+                }
+                if (scannerDesc) {
+                    scannerDesc.textContent = "Hover over this console card to ping the active fleet simulator node and retrieve instantaneous diagnostics.";
+                }
+            });
+        </script>
     
         <section id="objectives" class="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10">
             <div class="text-center max-w-3xl mx-auto mb-16">
