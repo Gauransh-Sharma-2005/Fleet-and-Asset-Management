@@ -1,0 +1,28 @@
+import React from 'react';
+import { useFleet } from '../context/FleetContext';
+
+export default function AlertBar() {
+  const { navigateTo } = useFleet();
+  return (
+    <div
+      className="relative z-40 border-b border-indigo-500/10 py-2 px-4 text-center text-xs flex items-center justify-center gap-2 flex-wrap"
+      style={{ background: 'rgba(10,8,30,0.9)' }}
+    >
+      <span className="gradient-bg text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">
+        Live
+      </span>
+      <span className="text-slate-300">
+        FleetStream v2.4.0 — Enhanced AI dashcam safety coaching profiles now active.
+      </span>
+      <button
+        onClick={() => {
+          navigateTo('guest');
+          setTimeout(() => document.getElementById('monitor')?.scrollIntoView({ behavior: 'smooth' }), 50);
+        }}
+        className="underline text-indigo-400 hover:text-white transition-colors ml-1 font-semibold"
+      >
+        Launch Console →
+      </button>
+    </div>
+  );
+}
