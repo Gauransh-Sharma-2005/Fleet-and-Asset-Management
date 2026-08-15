@@ -1,0 +1,10 @@
+Asset ID : TRK-009
+Sensor   : Thermal Core
+Status   : Optimal
+Reading  : 44
+-----------------------------------
+Asset ID : TRK-009
+Sensor   : Thermal core
+Status   : Critical
+Reading  : 100
+-----------------------------------

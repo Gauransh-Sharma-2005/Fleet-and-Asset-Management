@@ -1,0 +1,19 @@
+{
+  "name": "fleetstream-react",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "start",
+    "server": "npx json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm run server\" \"npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

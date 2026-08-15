@@ -1,0 +1,7 @@
+{
+  "assets": [
+    { "id": 1, "assetId": "TRK-8821", "type": "Truck", "status": "Online", "temp": 88, "location": "Zone A" },
+    { "id": 2, "assetId": "VAN-4042", "type": "Van", "status": "Warning", "temp": 112, "location": "Zone B" },
+    { "id": 3, "assetId": "TRK-1092", "type": "Truck", "status": "Online", "temp": 95, "location": "Zone C" }
+  ]
+}

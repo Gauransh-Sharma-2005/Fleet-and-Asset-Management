@@ -12,6 +12,7 @@ import Handshake from './components/Handshake';
 import AdminDashboard from './components/AdminDashboard';
 import AssetManager from './components/AssetManager';
 import Footer from './components/Footer';
+import FleetFileSystem from './components/FleetFileSystem';
 
 function ScrollProgress() {
   const [pct, setPct] = useState(0);
@@ -53,8 +54,12 @@ function GuestView() {
       <Objectives />
       <Features />
       <LiveMonitor />
-      {/* Asset CRUD management, ported from the original AssetManager component */}
+      {/* Asset CRUD management */}
       <AssetManager />
+      {/* Node.js File System Laboratory Exercise Component */}
+      <div style={{ padding: '40px 20px' }}>
+        <FleetFileSystem />
+      </div>
     </>
   );
 }
@@ -73,6 +78,8 @@ function Shell() {
         {view === 'admin-login' && <AdminLogin />}
         {view === 'handshake' && <Handshake />}
         {view === 'admin' && <AdminDashboard />}
+        {/* Added explicit filesystem route support if toggled from context/navbar */}
+        {view === 'filesystem' && <FleetFileSystem />}
       </main>
       <Footer />
     </div>
