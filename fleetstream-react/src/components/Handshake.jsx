@@ -33,8 +33,7 @@ export default function Handshake() {
       timers.forEach(clearTimeout);
       clearTimeout(finalTimer);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [completeHandshake]);
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-6 py-20">

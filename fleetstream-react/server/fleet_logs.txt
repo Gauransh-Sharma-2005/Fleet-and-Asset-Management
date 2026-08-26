@@ -8,3 +8,8 @@ Sensor   : Thermal core
 Status   : Critical
 Reading  : 100
 -----------------------------------
+Asset ID : TRK-007
+Sensor   : Thermal Core
+Status   : Warning
+Reading  : 120
+-----------------------------------
