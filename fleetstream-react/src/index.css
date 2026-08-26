@@ -213,6 +213,7 @@ select {
   border: 1px solid rgba(148, 163, 184, 0.08);
   margin-bottom: 12px;
   background-color: rgba(15, 23, 42, 0.8);
+  overflow-wrap: anywhere;
 }
 
 .log-item.critical {
@@ -304,5 +305,11 @@ input[type='range']::-webkit-slider-thumb:hover {
   .max-w-7xl {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .log-item {
+    flex-direction: column;
   }
 }

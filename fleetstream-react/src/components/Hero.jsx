@@ -19,31 +19,31 @@ export default function Hero() {
 
   return (
     <section
-      className="relative py-36 sm:py-48 text-center overflow-hidden bg-cover bg-center bg-fixed"
+      className="relative py-24 sm:py-48 text-center overflow-hidden bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80')` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/93 via-[#030712]/90 to-[#030712]/97 backdrop-blur-[2px]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/80 via-[#030712]/70 to-[#030712]/88 backdrop-blur-[2px]"></div>
 
       {/* Floating orbs */}
-      <div className="float-orb w-96 h-96 bg-indigo-600/50 top-10 left-10 absolute rounded-full blur-3xl opacity-45"></div>
-      <div className="float-orb w-80 h-80 bg-purple-600/50 top-20 right-20 absolute rounded-full blur-3xl opacity-45" style={{ animationDelay: '-5s' }}></div>
-      <div className="float-orb w-64 h-64 bg-pink-600/45 bottom-20 left-1/4 absolute rounded-full blur-3xl opacity-45" style={{ animationDelay: '-10s' }}></div>
+      <div className="float-orb w-96 h-96 bg-indigo-600/50 top-10 left-10 absolute rounded-full blur-3xl opacity-25"></div>
+      <div className="float-orb w-80 h-80 bg-purple-600/50 top-20 right-20 absolute rounded-full blur-3xl opacity-25" style={{ animationDelay: '-5s' }}></div>
+      <div className="float-orb w-64 h-64 bg-pink-600/45 bottom-20 left-1/4 absolute rounded-full blur-3xl opacity-25" style={{ animationDelay: '-10s' }}></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 space-y-10">
-        <div className="inline-flex items-center space-x-3 bg-indigo-500/25 border border-indigo-400/40 px-6 py-2.5 rounded-full text-xs font-bold text-indigo-300 badge-glow">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-10">
+        <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-indigo-500/25 border border-indigo-400/40 px-3 sm:px-6 py-2.5 rounded-full text-[10px] sm:text-xs font-bold text-indigo-300 badge-glow">
           <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
           <span>Real-Time Multi-Region Telemetry Domain</span>
           <Sparkles className="w-3.5 h-3.5" />
         </div>
 
-        <h1 className="text-5xl sm:text-7xl font-black tracking-tight text-white leading-tight" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+        <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-white leading-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.55)' }}>
           Real-Time Fleet &amp;
           <br />
-          <span className="gradient-text">Asset Management</span>
+          <span className="gradient-text" style={{ filter: 'brightness(1.3)' }}>Asset Management</span>
           <br /> System
         </h1>
 
-        <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+        <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
           Eliminate operational blind spots by transforming physical vehicles into{' '}
           <span className="text-indigo-300 font-bold bg-indigo-500/15 px-2 py-0.5 rounded">intelligent, data-streaming nodes</span>.
           Built with native React state management and a{' '}
@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#monitor"
-            className="gradient-bg btn-primary text-white px-10 py-4 rounded-xl font-bold text-base shadow-2xl shadow-indigo-500/40 flex items-center justify-center gap-3"
+            className="gradient-bg btn-primary text-white px-5 sm:px-10 py-4 rounded-xl font-bold text-sm sm:text-base shadow-2xl shadow-indigo-500/40 flex items-center justify-center gap-3"
           >
             <Terminal className="w-5 h-5" />
             Open Telemetry Monitor
@@ -61,7 +61,7 @@ export default function Hero() {
           </a>
           <button
             onClick={requestNotificationPermission}
-            className={`btn-primary px-10 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-3 transition-colors ${
+            className={`btn-primary px-5 sm:px-10 py-4 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-3 transition-colors ${
               notiEnabled
                 ? 'bg-emerald-500/15 border border-emerald-500/30 text-emerald-300'
                 : 'glass text-slate-300 hover:border-indigo-500/40'
