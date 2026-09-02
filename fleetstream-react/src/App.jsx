@@ -39,9 +39,9 @@ function ScrollProgress() {
 function AmbientOrbs() {
   return (
     <>
-      <div className="orb bg-indigo-600 w-[36rem] h-[36rem] -top-40 -left-40" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.12, pointerEvents: 'none', zIndex: 0 }}></div>
-      <div className="orb bg-purple-600 w-[32rem] h-[32rem] top-1/3 right-0" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.12, pointerEvents: 'none', zIndex: 0 }}></div>
-      <div className="orb bg-pink-600 w-[28rem] h-[28rem] bottom-0 left-1/3" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.12, pointerEvents: 'none', zIndex: 0 }}></div>
+      <div className="hidden sm:block orb bg-indigo-600 w-[24rem] sm:w-[36rem] h-[24rem] sm:h-[36rem] -top-40 -left-40" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.1, pointerEvents: 'none', zIndex: 0 }}></div>
+      <div className="hidden sm:block orb bg-purple-600 w-[20rem] sm:w-[32rem] h-[20rem] sm:h-[32rem] top-1/3 right-0" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.1, pointerEvents: 'none', zIndex: 0 }}></div>
+      <div className="hidden sm:block orb bg-pink-600 w-[18rem] sm:w-[28rem] h-[18rem] sm:h-[28rem] bottom-0 left-1/3" style={{ position: 'fixed', borderRadius: '50%', filter: 'blur(110px)', opacity: 0.1, pointerEvents: 'none', zIndex: 0 }}></div>
     </>
   );
 }
@@ -57,7 +57,7 @@ function GuestView() {
       {/* Asset CRUD management */}
       <AssetManager />
       {/* Node.js File System Laboratory Exercise Component */}
-      <div style={{ padding: '40px 20px' }}>
+      <div className="py-4 sm:py-8">
         <FleetFileSystem />
       </div>
     </>

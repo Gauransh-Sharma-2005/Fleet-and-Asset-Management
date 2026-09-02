@@ -22,12 +22,12 @@ export default function DiagnosticForm() {
   };
 
   return (
-    <div className="glass hover-glow p-6 rounded-3xl mb-10 border border-indigo-500/10">
-      <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2 font-outfit">
+    <div className="glass hover-glow p-5 sm:p-6 rounded-2xl sm:rounded-3xl mb-8 sm:mb-10 border border-indigo-500/10">
+      <h3 className="text-sm font-bold text-white mb-3.5 sm:mb-4 flex items-center gap-2 font-outfit">
         <Keyboard className="w-4 h-4 text-purple-400" />
         Manual Diagnostic Override
       </h3>
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
         <input
           type="text"
           placeholder="Asset ID (e.g., TRK-100)"
@@ -35,7 +35,7 @@ export default function DiagnosticForm() {
           onChange={(e) => setAssetId(e.target.value)}
           required
           pattern="[A-Za-z]{3}-[0-9]{3}"
-          className="bg-slate-900/80 border border-indigo-500/20 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 font-mono flex-1 placeholder-slate-600 transition-colors"
+          className="w-full bg-slate-900/80 border border-indigo-500/20 text-white text-base sm:text-sm rounded-xl px-4 py-3 sm:py-3.5 focus:outline-none focus:border-indigo-500 font-mono flex-1 placeholder-slate-600 transition-colors"
         />
         <input
           type="number"
@@ -45,17 +45,17 @@ export default function DiagnosticForm() {
           required
           min="-50"
           max="250"
-          className="bg-slate-900/80 border border-indigo-500/20 text-white text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-indigo-500 font-mono flex-1 placeholder-slate-600 transition-colors"
+          className="w-full bg-slate-900/80 border border-indigo-500/20 text-white text-base sm:text-sm rounded-xl px-4 py-3 sm:py-3.5 focus:outline-none focus:border-indigo-500 font-mono flex-1 placeholder-slate-600 transition-colors"
         />
         <button
           type="submit"
-          className="gradient-bg btn-primary text-white px-7 py-3 rounded-xl text-sm font-bold shadow-md shadow-indigo-500/15 flex items-center gap-2"
+          className="w-full sm:w-auto gradient-bg btn-primary text-white px-7 py-3 sm:py-3.5 rounded-xl text-sm font-bold shadow-md shadow-indigo-500/15 flex items-center justify-center gap-2 shrink-0 active:scale-95 transition-all"
         >
           <Send className="w-4 h-4" />
           Log Diagnostic
         </button>
       </form>
-      {error && <p className="text-rose-400 text-xs mt-3 flex items-center gap-1.5">{error}</p>}
+      {error && <p className="text-rose-400 text-xs mt-3 flex items-center gap-1.5 leading-relaxed">{error}</p>}
     </div>
   );
 }

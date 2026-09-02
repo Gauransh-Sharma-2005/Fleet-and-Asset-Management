@@ -76,7 +76,7 @@ export default function TelemetryChart() {
   }, []);
 
   return (
-    <div className="glass hover-glow p-6 rounded-3xl border border-indigo-500/10 lg:col-span-2 flex flex-col gap-4">
+    <div className="glass hover-glow p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-indigo-500/10 lg:col-span-2 flex flex-col gap-3 sm:gap-4">
       <div>
         <h3 className="text-sm font-bold text-white flex items-center gap-2 font-outfit mb-1">
           <LineChart className="w-4 h-4 text-indigo-400" />
@@ -84,7 +84,7 @@ export default function TelemetryChart() {
         </h3>
         <p className="text-[10px] text-slate-500 font-mono">Packets per second — gateway simulation</p>
       </div>
-      <div className="flex-1 relative" style={{ minHeight: 180 }}>
+      <div className="flex-1 relative w-full h-44 sm:h-52" style={{ minHeight: 160 }}>
         <canvas ref={canvasRef}></canvas>
       </div>
     </div>

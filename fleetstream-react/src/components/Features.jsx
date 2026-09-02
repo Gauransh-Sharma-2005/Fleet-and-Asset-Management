@@ -48,23 +48,23 @@ const ICON_WRAP_CLASSES = {
 
 export default function Features() {
   return (
-    <section id="features" className="max-w-7xl mx-auto px-6 py-20 border-t border-indigo-500/10 scroll-mt-24">
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-xs font-bold tracking-widest text-purple-400 uppercase mb-3">System Capabilities</h2>
-        <p className="text-4xl font-black text-white mt-3 gradient-text font-outfit">Platform Core Features</p>
+    <section id="features" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-indigo-500/10 scroll-mt-20 sm:scroll-mt-24">
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <h2 className="text-xs font-bold tracking-widest text-purple-400 uppercase mb-2">System Capabilities</h2>
+        <p className="text-2xl sm:text-4xl font-black text-white gradient-text font-outfit">Platform Core Features</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
         {ITEMS.map(({ icon: Icon, color, title, desc, tags }) => (
-          <div key={title} className="glass-card hover-glow p-8 rounded-3xl flex items-start space-x-6 border border-purple-500/8">
-            <div className={`bg-gradient-to-br ${ICON_WRAP_CLASSES[color]} p-4 rounded-2xl shrink-0 border`}>
-              <Icon className="w-7 h-7" />
+          <div key={title} className="glass-card hover-glow p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-start gap-4 sm:gap-6 border border-purple-500/8">
+            <div className={`bg-gradient-to-br ${ICON_WRAP_CLASSES[color]} p-3.5 sm:p-4 rounded-2xl shrink-0 border`}>
+              <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               <h3 className="text-base font-bold text-white mb-2 font-outfit">{title}</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">{desc}</p>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{desc}</p>
               <div className="mt-3 flex items-center gap-2 flex-wrap">
                 {tags.map(([label, tagColor]) => (
-                  <span key={label} className={`${TAG_CLASSES[tagColor]} text-xs px-2 py-0.5 rounded border font-mono font-bold`}>
+                  <span key={label} className={`${TAG_CLASSES[tagColor]} text-[10px] sm:text-xs px-2 py-0.5 rounded border font-mono font-bold`}>
                     {label}
                   </span>
                 ))}
